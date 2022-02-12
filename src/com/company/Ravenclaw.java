@@ -33,4 +33,34 @@ public class Ravenclaw extends Hogwarts {
         super.infoAboutStudent();
         System.out.println("Мудрость студента равна " + wisdom + ", остроумие равно " + wit + ", творчество на уровне " + creation + ".");
     }
+
+    public void compareWisdomRavenclawStudents(Ravenclaw student) {
+        if (this.wisdom > student.wisdom) {
+            System.out.println(this.getName() + " более умен, чем " + student.getName() + ".");
+        } else if (this.wisdom < student.wisdom) {
+            System.out.println(this.getName() + " менее умен, чем " + student.getName() + ".");
+        } else {
+            System.out.println("Студенты одинаково умны.");
+        }
+    }
+
+    public void compareWitRavenclawStudents(Ravenclaw student) {
+        if (this.wit > student.wit) {
+            System.out.println(this.getName() + " более остроумен, чем " + student.getName() + ".");
+        } else if (this.wit < student.wit) {
+            System.out.println(this.getName() + " менее остроумен, чем " + student.getName() + ".");
+        } else {
+            System.out.println("Студенты одинаково остроумны.");
+        }
+    }
+
+    public void compareCreationRavenclawStudents(Ravenclaw student) {
+        if (this.creation > student.creation) {
+            System.out.println(this.getName() + " более творческий , чем " + student.getName() + ".");
+        } else if (this.creation < student.creation) {
+            System.out.println(this.getName() + " менее творческий, чем " + student.getName() + ".");
+        } else {
+            System.out.println("Студенты одинаковы в своих творческих способностях.");
+        }
+    }
 }

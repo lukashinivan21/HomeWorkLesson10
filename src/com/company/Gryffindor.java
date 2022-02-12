@@ -32,4 +32,34 @@ public class Gryffindor extends Hogwarts {
         System.out.println("Благородство студента равно " + nobility + ", честь равна " + honour + ", храбрость равна " + bravery + ".");
     }
 
+    public void compareNobilityGryffindorStudents(Gryffindor student) {
+        if (this.nobility > student.nobility) {
+            System.out.println(this.getName() + " обладает большим благородством, чем "+ student.getName() + ".");
+        } else if (this.nobility < student.nobility) {
+            System.out.println(this.getName() + " обладает меньшим благородством, чем "+ student.getName() + ".");
+        } else {
+            System.out.println("Студенты равны в своем благородстве.");
+        }
+    }
+
+    public void compareHonourGryffindorStudents(Gryffindor student) {
+        if (this.honour > student.honour) {
+            System.out.println(this.getName() + " обладает большей честью, чем "+ student.getName() + ".");
+        } else if (this.honour < student.honour) {
+            System.out.println(this.getName() + " обладает меньшей честью, чем "+ student.getName() + ".");
+        } else {
+            System.out.println("Студенты одинаковы по своей чести.");
+        }
+    }
+
+    public void compareBraveryGryffindorStudents(Gryffindor student) {
+        if (this.bravery > student.bravery) {
+            System.out.println(this.getName() + " обладает большей храбростью, чем "+ student.getName() + ".");
+        } else if (this.bravery < student.bravery) {
+            System.out.println(this.getName() + " обладает меньшей храбростью, чем "+ student.getName() + ".");
+        } else {
+            System.out.println("Студенты одинаковы храбрые.");
+        }
+    }
+
 }

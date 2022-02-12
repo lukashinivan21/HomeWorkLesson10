@@ -22,66 +22,29 @@ public class Main {
 
         harryPotter.infoAboutStudent();
         System.out.println();
-        drako.infoAboutStudent();
+        zaharia.infoAboutStudent();
         System.out.println();
-        compareStudents(harryPotter, drako);
-        System.out.println();
-        compareGryffindorStudents(germiona, ron);
-        System.out.println();
-        compareSlytherinStudents(grehhem, greg);
-        System.out.println();
-        compareHufflepuffStudents(zaharia, cedric);
-        System.out.println();
-        compareRavenclawStudents(chang,marcus);
-    }
 
-    static void compareStudents(Hogwarts student1, Hogwarts student2) {
-        if (student1.getPowerOfMagic() > student2.getPowerOfMagic()) {
-            System.out.println(student1.getName() + " обладает большей силой магии, чем " + student2.getName() + ".");
-        } else if(student1.getPowerOfMagic() < student2.getPowerOfMagic()) {
-            System.out.println(student2.getName() + " колдует с большей силой, чем " + student1.getName() + ".");
-        } else {
-            System.out.println("Магические способности студентов равны.");
-        }
-    }
+        harryPotter.compareMagicHogwartsStudents(drako);
+        ron.compareDistanceHogwartsStudents(zaharia);
 
-    static void compareGryffindorStudents(Gryffindor student1, Gryffindor student2) {
-        if (student1.getNobility() > student2.getNobility()) {
-            System.out.println(student1.getName() + " обладает большим благородством, чем " + student2.getName() + ".");
-        } else if (student1.getNobility() < student2.getNobility()){
-            System.out.println(student2.getName() + " обладает большим благородством, чем " + student1.getName() + ".");
-        } else {
-            System.out.println("У студентов одинаковое благородство.");
-        }
-    }
+        harryPotter.compareHonourGryffindorStudents(germiona);
+        ron.compareBraveryGryffindorStudents(harryPotter);
+        germiona.compareNobilityGryffindorStudents(ron);
 
-    static void compareSlytherinStudents(Slytherin student1, Slytherin student2) {
-        if (student1.getLustForPower() > student2.getLustForPower()) {
-            System.out.println(student1.getName() + " жаждет власти сильнее, чем " + student2.getName() + ".");
-        } else if (student1.getLustForPower() < student2.getLustForPower()) {
-            System.out.println(student2.getName() + " больше жаждет власти, чем " + student1.getName() + ".");
-        } else {
-            System.out.println("У студентов одинаковая жажда власти.");
-        }
-    }
+        cedric.compareFaithHufflepuffStudents(justine);
+        justine.compareHonestyHufflepuffStudents(zaharia);
+        zaharia.compareAssiduousHufflepuffStudents(cedric);
 
-    static void compareHufflepuffStudents(Hufflepuff student1, Hufflepuff student2) {
-        if (student1.getHonesty() > student2.getHonesty()) {
-            System.out.println(student1.getName() + " более честный, чем " + student2.getName() + ".");
-        } else if (student1.getHonesty() < student2.getHonesty()) {
-            System.out.println(student2.getName() + " более честный, чем " + student1.getName() + ".");
-        } else {
-            System.out.println("Студенты одинаково честны.");
-        }
-    }
+        padma.compareWisdomRavenclawStudents(chang);
+        marcus.compareWitRavenclawStudents(padma);
+        chang.compareCreationRavenclawStudents(marcus);
 
-    static void compareRavenclawStudents(Ravenclaw student1, Ravenclaw student2) {
-        if (student1.getWisdom() > student2.getWisdom()) {
-            System.out.println(student1.getName() + " более умный, чем " + student2.getName() + ".");
-        } else if (student1.getWisdom() < student2.getWisdom()) {
-            System.out.println(student2.getName() + " более умный, чем " + student1.getName() + ".");
-        } else {
-            System.out.println("Студенты одинаково умные");
-        }
+
+        greg.compareAmbitionSlytherinStudents(drako);
+        drako.compareLustForPowerSlytherinStudents(grehhem);
+        grehhem.compareSlynessSlytherinStudents(greg);
+        drako.compareDeterminationSlytherinStudents(grehhem);
+        greg.compareResourcefulnessSlytherinStudents(greg);
     }
 }
